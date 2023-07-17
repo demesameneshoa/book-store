@@ -14,7 +14,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -61,15 +60,7 @@
 - **Redux Toolkit slice and actions deployed**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Screen Shot <a name="screen-shot"></a>
-
-Coming Soon
-
 <!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-Coming Soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +124,7 @@ npm start
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/demesameneshoa/book-store/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
