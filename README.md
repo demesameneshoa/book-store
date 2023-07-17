@@ -57,6 +57,8 @@
 - **Add and Remove Books Deployed**
 - **Props and States Used**
 - **React Router Deployed**
+- **Redux Installed**
+- **Redux Toolkit slice and actions deployed**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Screen Shot <a name="screen-shot"></a>
@@ -121,7 +123,7 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Deploy Redux**
+- [ ] **Deploy Redux Completely**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
