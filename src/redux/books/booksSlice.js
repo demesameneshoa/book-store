@@ -1,13 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
+import books from '../Books';
 
+const initialState = books;
 const booksSlice = createSlice({
   name: 'books',
-  initialState: [],
+  initialState,
   reducers: {
     addBook: (state, action) => {
       state.push(action.payload);
     },
-    removeBook: (state, action) => state.filter((book) => book.id !== action.payload.id),
+    removeBook: (state, action) => {
+      const removeindex = state.findIndex((book) => book.item_id === action.payload);
+      if (removeindex !== -1) {
+        state.splice(removeindex, 1);
+      }
+    },
   },
 });
 

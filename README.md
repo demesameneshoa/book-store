@@ -58,6 +58,9 @@
 - **React Router Deployed**
 - **Redux Installed**
 - **Redux Toolkit slice and actions deployed**
+- **Redux Store Deployed**
+- **Redux useSelector and useDispatch Used**
+- **Redux Reducers Deployed**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -110,7 +113,8 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Deploy Redux Completely**
+- [ ] **Deploy API Linkage**
+- [ ] **Add Styling**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
