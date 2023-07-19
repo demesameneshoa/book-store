@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Book = ({ book, onRemove }) => (
+const Book = ({ book }) => (
   <div>
     <h4>
       Title:
@@ -10,7 +10,7 @@ const Book = ({ book, onRemove }) => (
       Author:
       {book.author}
     </h4>
-    <button type="button" onClick={() => onRemove(book.id)}> REMOVE </button>
+    <button type="button"> REMOVE </button>
   </div>
 );
 
@@ -20,6 +20,5 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   })).isRequired,
-  onRemove: PropTypes.func.isRequired,
 };
 export default Book;
