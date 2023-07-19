@@ -17,7 +17,6 @@ const Books = () => {
             category={book.category}
           />
         ))}
-
       </div>
       <div>
         <h1>Add New Book</h1>

@@ -1,24 +1,26 @@
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => (
+const Book = ({ title, author, category }) => (
   <div>
     <h4>
       Title:
-      {book.title}
+      {title}
     </h4>
     <h4>
       Author:
-      {book.author}
+      {author}
+    </h4>
+    <h4>
+      Category:
+      {category}
     </h4>
     <button type="button"> REMOVE </button>
   </div>
 );
 
 Book.propTypes = {
-  book: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  })).isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 export default Book;
