@@ -1,4 +1,4 @@
-const bookslist = [
+const books = [
   {
     item_id: 'item1',
     title: 'The Great Gatsby',
@@ -19,4 +19,4 @@ const bookslist = [
   },
 ];
 
-export default bookslist;
+export default books;
