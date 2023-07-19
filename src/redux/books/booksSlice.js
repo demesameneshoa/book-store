@@ -10,9 +10,9 @@ const booksSlice = createSlice({
       state.push(action.payload);
     },
     removeBook: (state, action) => {
-      const index = state.findIndex((book) => book.item_id === action.payload);
-      if (index !== -1) {
-        state.splice(index, 1);
+      const removeindex = state.findIndex((book) => book.item_id === action.payload);
+      if (removeindex !== -1) {
+        state.splice(removeindex, 1);
       }
     },
   },
