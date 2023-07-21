@@ -29,7 +29,7 @@
 
 # 📖 [Book Store ] <a name="about-project"></a>
 
-**Book Store** is a a Books list react applicaiton.
+**Book Store** is a Books list react applicaiton with redux toolkit that displays books list linked with an external API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,7 +39,6 @@
   <summary>Client</summary>
   <ul>
     <li>React</a></li>
-    <li>Vite</a></li>
     <li>HTML</a></li>
     <li>CSS</a></li>
     <li>JS</a></li>
@@ -61,6 +60,8 @@
 - **Redux Store Deployed**
 - **Redux useSelector and useDispatch Used**
 - **Redux Reducers Deployed**
+- **API Linked**
+- **Books List are now added and removed to and from the API**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -113,7 +114,6 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Deploy API Linkage**
 - [ ] **Add Styling**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
