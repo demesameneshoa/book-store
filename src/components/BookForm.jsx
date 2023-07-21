@@ -23,7 +23,8 @@ const BookForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input id="title-input" type="text" placeholder="BOOK TITLE" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input id="author-input" type="text" placeholder="Book Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+      <input id="author-input" type="text" placeholder="BOOK AUTHOR" value={author} onChange={(e) => setAuthor(e.target.value)} />
+      <span className="input-arrow">▼</span>
       <button id="add-button" type="submit">Add Book</button>
     </form>
   );

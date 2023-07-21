@@ -37,7 +37,8 @@ p {
 .categories-page {
   width: 15rem;
   height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
+  margin-left: 1.5rem;
+  margin-right: 2rem;
   padding-left: 1rem;
   font-family: Montserrat Arial, Helvetica, sans-serif;
   font-size: 1.875rem;
@@ -92,9 +93,12 @@ p {
 }
 
 .Line {
-  width: 100%;
+  width: 92%;
+  align-self: center;
   height: 0.002rem;
-  margin: 2.5rem 0 1.813rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2.4rem;
   border: solid 1px #dad9d9;
 }
 
@@ -113,11 +117,12 @@ p {
 #author-input {
   background: #ffff;
   border: solid 1px #e8e8e8;
+  padding-left: 1rem;
   width: 35%;
   height: 2.8rem;
   font-size: 1rem;
   font-family: Montserrat Arial, Helvetica, sans-serif;
-  margin-left: 2rem;
+  margin-left: 1.8rem;
   margin-top: 2rem;
 }
 
@@ -276,7 +281,7 @@ p {
 }
 
 .chapter-num {
-  width: 4.688rem;
+  width: 8rem;
   height: 1.313rem;
   font-family: RobotoSlab Arial, Helvetica, sans-serif;
   font-size: 1rem;
@@ -286,7 +291,7 @@ p {
 }
 
 #update-progress {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 11.5rem;
   height: 2.063rem;
   border-radius: 3px;
@@ -303,4 +308,9 @@ p {
 .categories-page {
   width: 80%;
   text-align: center;
+}
+
+.input-arrow {
+  margin-left: -1.5rem;
+  color: #c7c7c7;
 }
