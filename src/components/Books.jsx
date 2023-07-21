@@ -36,11 +36,11 @@ const Books = () => {
                 </div>
               );
             }
-            return <h3 key={Object.keys(books)[index]}>No Books Available</h3>;
+            return null;
           })}
       </div>
       <div className="Line" />
-      <div>
+      <div className="new-book-wrapper">
         <span className="addBookHeader">
           ADD NEW BOOK
         </span>
