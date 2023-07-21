@@ -1,26 +1,43 @@
-import { createSlice } from '@reduxjs/toolkit';
-import books from '../Books';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
+const fetchBooks = createAsyncThunk('books/fetchbooks', async () => {
+  try {
+    const response = await axios.get(
+      'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/qHwCpmqB3iihMDgYafE0/books',
+    );
+    return response.data;
+  } catch (error) {
+    throw error.response;
+  }
+});
 const initialState = {
-  books,
+  books: [],
   isLoading: false,
+  error: undefined,
 };
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      state.push(action.payload);
-    },
-    removeBook: (state, action) => {
-      const removeindex = state.books.findIndex((book) => book.item_id === action.payload);
-      if (removeindex !== -1) {
-        state.books.splice(removeindex, 1);
-      }
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchBooks.pending, (state) => {
+        state.isLoading = true;
+        state.error = undefined;
+      })
+      .addCase(fetchBooks.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.books = action.payload;
+        // console.log(state.books);
+      })
+      .addCase(fetchBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+        console.log(action.error.message);
+      });
   },
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
-
 export default booksSlice.reducer;
+export { fetchBooks };

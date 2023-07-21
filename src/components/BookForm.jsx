@@ -1,19 +1,18 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+// import { useDispatch } from 'react-redux';
 
 const BookForm = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = {
-      item_id: Date.now().toString(),
-      title,
-      author,
-    };
-    dispatch(addBook(newBook));
+    // const newBook = {
+    //   item_id: Date.now().toString(),
+    //   title,
+    //   author,
+    // };
+    // dispatch(addBook(newBook));
     setTitle('');
     setAuthor('');
   };
