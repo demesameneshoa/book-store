@@ -62,6 +62,7 @@
 - **Redux Reducers Deployed**
 - **API Linked**
 - **Books List are now added and removed to and from the API**
+- **Styling done as per the provided design**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -114,7 +115,7 @@ npm start
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add Styling**
+- [ ] **Mobile responsiveness**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
