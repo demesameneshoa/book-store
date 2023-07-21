@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
+import '../styles/styles.css';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ const BookForm = () => {
       item_id: uuidv4(),
       title,
       author,
-      category: 'N/A',
+      category: 'Fiction',
     };
     dispatch(addBook(newBook));
     setTitle('');
@@ -21,9 +22,9 @@ const BookForm = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-      <input type="text" placeholder="Book Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-      <button type="submit">Add Book</button>
+      <input id="title-input" type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+      <input id="author-input" type="text" placeholder="Book Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+      <button id="add-button" type="submit">Add Book</button>
     </form>
   );
 };
