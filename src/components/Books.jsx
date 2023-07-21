@@ -10,6 +10,13 @@ const Books = () => {
     dispatch(fetchBooks());
   }, [dispatch]);
   const books = useSelector((state) => state.books.books);
+  const isLoading = useSelector((state) => state.books.isLoading);
+  console.log(isLoading);
+  if (isLoading) {
+    return (
+      <h2>Loading...</h2>
+    );
+  }
   return (
     <>
       <div>

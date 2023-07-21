@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
 
 const Navbar = () => (
-  <nav>
+  <nav className="navbar">
     <div>
-      <h1> Book Store</h1>
+      <span className="Bookstore-CMS Text-Style-3">
+        Bookstore CMS
+      </span>
     </div>
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Books</Link>
-        </li>
-        <li>
-          <Link to="/categories">Categories</Link>
-        </li>
-      </ul>
+    <div className="menuitems">
+      <Link to="/"><span className="BOOKS Text-Style-6">BOOKS</span></Link>
+      <Link to="/categories"><span className="CATEGORIES Text-Style-6">CATEGORIES</span></Link>
+    </div>
+    <div className="navbar-icon">
+      <img src="https://i.imgur.com/AM0HQkJ.png" alt="user-icon" />
     </div>
   </nav>
 );

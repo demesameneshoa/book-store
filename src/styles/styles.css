@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+body {
+  width: 100%;
+  height: 100%;
+  padding: auto auto;
+  background-color: #f5f6fa;
+  text-decoration: none;
+}
+
+#root {
+    width: 85%;
+    height: 80%;
+    margin: auto auto;
+    margin-top: 5%;
+    padding-bottom: 30rem;
+    border-radius: 4px; 
+    box-shadow: 40px 60px 60px 0 rgba(0, 0, 0, 0.2);
+    background-color: #fafafa;
+}
+
+.navbar {
+ width: 100%;
+ height:5.938rem;
+ background-color: #ffff;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  padding-left: 1rem;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.menuitems {
+  width: 20%;
+}
+
+.BOOKS {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.CATEGORIES {
+  width: 6.563rem;
+  height: 1rem;
+  margin: 1.125rem 41.5rem 0.688rem 2.563rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.navbar-icon {
+  height: 60%;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: 2rem;
+  justify-self:flex-end;
+  cursor: pointer;
+  border:solid 2px #e8e8e8;
+}
