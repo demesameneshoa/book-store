@@ -11,6 +11,30 @@ const fetchBooks = createAsyncThunk('books/fetchbooks', async () => {
     throw error.response;
   }
 });
+
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/qHwCpmqB3iihMDgYafE0/books';
+const axiosInstance = axios.create({ baseURL });
+
+const addBook = createAsyncThunk(
+  'books/addBook',
+  async (bookData, thunkAPI) => {
+    try {
+      const options = {
+        method: 'POST',
+        data: bookData,
+      };
+
+      const response = await axiosInstance.request(options);
+      if (response.data === 'Created') {
+        thunkAPI.dispatch(fetchBooks());
+      }
+      return bookData;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
+  },
+);
+
 const initialState = {
   books: [],
   isLoading: false,
@@ -34,10 +58,10 @@ const booksSlice = createSlice({
       .addCase(fetchBooks.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
-        console.log(action.error.message);
+        // console.log(action.error.message);
       });
   },
 });
 
 export default booksSlice.reducer;
-export { fetchBooks };
+export { fetchBooks, addBook };
