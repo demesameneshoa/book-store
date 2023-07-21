@@ -1,22 +1,35 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchBooks } from '../redux/books/booksSlice';
 import Book from './Book';
 import BookForm from './BookForm';
 
 const Books = () => {
-  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+  const books = useSelector((state) => state.books.books);
   return (
     <>
       <div>
         <h1>Books List</h1>
-        {books.map((book) => (
-          <Book
-            key={book.item_id}
-            itemID={book.item_id}
-            title={book.title}
-            author={book.author}
-            category={book.category}
-          />
-        ))}
+        {Object.values(books)
+          .flat()
+          .map((book, index) => {
+            if (book && book.title && book.author && book.category) {
+              return (
+                <Book
+                  key={Object.keys(books)[index]}
+                  itemID={Object.keys(books)[index]}
+                  author={book.author}
+                  title={book.title}
+                  category={book.category}
+                />
+              );
+            }
+            return <h3 key={Object.keys(books)[index]}>No Books Available</h3>;
+          })}
       </div>
       <div>
         <h1>Add New Book</h1>
